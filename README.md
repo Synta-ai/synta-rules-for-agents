@@ -9,15 +9,21 @@ This repository provides pre-configured rules and prompts that teach AI coding a
 ### 1. Copy Configuration
 
 ```bash
-# For Claude Desktop
-cp .claude/agents/synta-mcp-agent.md ~/.claude/agents/
+# For Claude Code
+cp .claude/agents/nia.md ~/.claude/agents/
 
 # For Claude Code
-cp .claude/agents/synta-mcp-agent.md ~/.claude-code/prompts/
+cp .claude/agents/synta.md ~/.claude-code/prompts/
 
-# For Cursor  
-cp .cursor/synta-mcp-agent.mdc ~/.cursor/rules/
+# For Cursor
+cp .cursor/rules/synta.mdc ~/.cursor/rules/
 
+# For Codex: 
+copy .codex/skills/SKILL.MD into your project
+
+    
+# For ChatGPT: use .chatgpt/chatgpt-project-instructions.md in Project instructions
+# For Google Antigravity: use .antigravity/agents/workflows/synta.md in Workspace rules
 # For other AI clients, check the [MCP Docs](https://mcp-docs.synta.io) for setup instructions.
 ```
 
