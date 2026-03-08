@@ -17,7 +17,7 @@ Ensure your agent has access to Synta's MCP tools. See the [MCP Docs](https://mc
 |--------|-------|
 | Cursor | [Setup →](https://mcp-docs.synta.io/rules#cursor) |
 | Claude Code | [Setup →](https://mcp-docs.synta.io/rules#claude-code) |
-| Claude Desktop & Claude.ai | [Setup →](https://mcp-docs.synta.io/rules#claude-desktop-%26-claude-ai) |
+| Claude.ai | [Setup →](https://mcp-docs.synta.io/rules#claude-desktop-%26-claude-ai) |
 | ChatGPT | [Setup →](https://mcp-docs.synta.io/rules#chatgpt) |
 | Codex | [Setup →](https://mcp-docs.synta.io/rules#codex) |
 | Google Antigravity | [Setup →](https://mcp-docs.synta.io/rules#google-antigravity) |
