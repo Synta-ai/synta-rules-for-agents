@@ -23,6 +23,7 @@ Ensure your agent has access to Synta's MCP tools. See the [MCP Docs](https://mc
 | Google Antigravity | [Setup →](https://mcp-docs.synta.io/rules#google-antigravity) |
 | OpenClaw | [Setup →](https://mcp-docs.synta.io/rules#openclaw) |
 | OpenCode | [Setup →](https://mcp-docs.synta.io/rules#opencode) |
+| WindSurf | [Setup →](https://mcp-docs.synta.io/rules#windsurf) |
 
 Or copy files manually from this repo (see the paths in the links above).
 
