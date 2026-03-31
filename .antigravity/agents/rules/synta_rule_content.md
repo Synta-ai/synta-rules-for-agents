@@ -108,9 +108,10 @@ n8n_search_workflow({id: "wf-id", scope: "flow", match_strategy: "regex", query:
 ### Node Discovery (New & Existing Workflows)
 
 ```json
-search_nodes({query: "webhook", source: "all"})          // all nodes (default)
-search_nodes({query: "slack", source: "core"})         // n8n base nodes only
-search_nodes({query: "openai", source: "community"})   // community nodes only
+search_nodes({queries: ["slack", "webhook"], source: "core"}) // First pass: lightweight discovery to find candidate nodes
+
+// VITAL: once you know which node you want, call search_nodes again with includeOperations=true
+search_nodes({queries: ["slack"], includeOperations: true})  // returns resource / operation / mode details when the node has them
 ```
 
 ---
@@ -154,9 +155,10 @@ get_best_practices({mode: "detail", technique: "data_persistence"})     // + wor
 ### Get Node Details
 
 ```json
-get_node({nodeType: "n8n-nodes-base.httpRequest", detail: "standard"})  // Standard info
-get_node({nodeType: "n8n-nodes-base.slack", detail: "standard", includeConfigExamples: "json"})  // With examples
-get_node({nodeType: "n8n-nodes-base.httpRequest", mode: "search_properties", propertyQuery: "auth"})  // Find properties
+get_node({nodeIds: [{nodeId: "nodes-base.httpRequest"}], view: "standard"}) // HIGHLY RECOMMENDED: use standard view first - it returns the exact node definition needed for configuration
+get_node({nodeIds: [{nodeId: "nodes-base.slack", resource: "message", operation: "post"}], view: "standard"}) // MUST DO: if search_nodes(includeOperations=true) returned resource / operation / mode, include those exact values here
+get_node({nodeIds: [{nodeId: "nodes-base.httpRequest"}], view: "summary"}) // Optional quick overview of required fields, resources, and operations
+
 ```
 
 ### Create Execution Plan
