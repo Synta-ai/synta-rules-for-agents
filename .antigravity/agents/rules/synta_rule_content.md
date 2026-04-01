@@ -152,6 +152,17 @@ get_best_practices({mode: "detail", technique: "universal"})            // Alway
 get_best_practices({mode: "detail", technique: "data_persistence"})     // + workflow-specific
 ```
 
+### Use Suggested Nodes for Fast Node Shortlists
+
+After identifying the workflow technique categories, call `get_suggested_nodes` to get a fast shortlist of likely nodes and a pattern hint before doing exact node configuration.
+
+```json
+get_suggested_nodes({categories: ["notification"]})
+get_suggested_nodes({categories: ["document_processing", "triage"]})
+```
+
+Then confirm the exact node choice with `search_nodes` and fetch the exact schema with `get_node`.
+
 ### Get Node Details
 
 ```json
